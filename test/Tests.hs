@@ -1,6 +1,7 @@
-import Test.Hspec        (Spec, it, describe, shouldBe, anyErrorCall)
+import Test.Hspec        (Spec, it, describe, shouldBe, anyErrorCall, shouldThrow)
 import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 import Test.QuickCheck
+import Control.Exception.Base
 
 import Exercise
 
@@ -27,9 +28,9 @@ specs = do
             it "Novembro" $ do
               diasMesPadrões 11 `shouldBe` 30
             it "Negativo" $ do
-              diasMesPadrões (-1) `shouldThrow` anyErrorCall
+              evaluate (diasMesPadrões (-1)) `shouldThrow` anyErrorCall
             it ">12" $ do
-              diasMesPadrões (-1) `shouldThrow` anyErrorCall
+              evaluate (diasMesPadrões (13)) `shouldThrow` anyErrorCall
 
           describe "eLógico" $ do
             it "Testa todas as combinações " $ property $
