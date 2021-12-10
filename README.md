@@ -2,7 +2,7 @@
 
 
 # Conteúdo
-Equações simples com uso de guardas.
+Equações simples com uso de casamento de padrões.
 
 # Exercícios simples
 

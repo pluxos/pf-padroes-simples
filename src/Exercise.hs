@@ -1,64 +1,108 @@
 module Exercise where
 
--- Defina as seguintes funções usando guardas
+-- Defina as seguintes funções usando casamento de padrões.
 
 {-
 Esta função calcula calcula se o primeiro valor ganha do segundo em um jogo de pedra/tesoura/papel
 
-pedraTesouraPapelGuardas
+pedraTesouraPapelPadrões
 - Entrada: m1 m2 - 0 é pedra, 1 é tesoura, 2 é papel.
 - Saída: True se m1 ganha e False se m2 ganha
 
->>>pedraTesouraPapelGuardas 0 1
+>>>pedraTesouraPapelPadrões 0 1
 True
 
->>>pedraTesouraPapelGuardas 1 2
+>>>pedraTesouraPapelPadrões 1 2
 True
 
->>>pedraTesouraPapelGuardas 2 0
+>>>pedraTesouraPapelPadrões 2 0
 True
 
->>>pedraTesouraPapelGuardas 1 0
+>>>pedraTesouraPapelPadrões 1 0
 False
 
->>>pedraTesouraPapelGuardas 2 1
+>>>pedraTesouraPapelPadrões 2 1
 False
 
->>>pedraTesouraPapelGuardas 0 2
+>>>pedraTesouraPapelPadrões 0 2
 False
 -}
-pedraTesouraPapelGuardas m1 m2 = undefined
-
-{-
-Esta função retorna -1 se os números passados como parâmetro estão em ordem decrescente, 1 ordem crescente, e 0 caso contrário.
-- Entrada: x y z
-- Saída: -1, x >= y >= z, 1 se x <= y <= z, 0 caso contrário.
-
->>>sobeDesceBagunca 1 2 3
-1
-
->>>sobeDesceBagunca 1 3 2
-0
-
->>>sobeDesceBagunca 3 2 1
--1
--}
-sobeDesceBagunca x y z = undefined
-
+pedraTesouraPapelPadrões m1 m2 = undefined
 
 {-
 Esta função retorna a quantidade de dias no mês indicado no parâmetro. Assuma que fevereiro tem 28 dias.
 - Entrada: mes - número
 - Saída: Dias no mes
 
->>>diasMes 1
+>>>diasMesPadrões 1
 31
 
->>>diasMes 2
+>>>diasMesPadrões 2
 28
 
->>>diasMes 4
+>>>diasMesPadrões 4
 30
 
 -}
-diasMes m = undefined
+diasMesPadrões m = undefined
+
+
+{- 
+Esta função retorna o E lógico das suas entradas, sem usar o operador &&
+- Entrada: b1 - booleano
+           b2 - booleano
+- Saída: b1 && b2
+
+>>> eLógico True True
+True
+
+>>> eLógico False True
+False
+
+>>> eLógico True False
+False
+
+>>> eLógico False False
+False
+
+-}
+eLógico b1 b2 = undefined 
+
+
+{- 
+Esta função retorna o OU lógico das suas entradas, sem usar o operador ||
+- Entrada: b1 - booleano
+           b2 - booleano
+- Saída: b1 || b2
+
+>>> ouLógico True True
+True
+
+>>> ouLógico False True
+True
+
+>>> ouLógico True False
+True
+
+>>> ouLógico False False
+False
+
+-}
+ouLógico b1 b2 = undefined 
+
+
+{- 
+Esta função diz se um caractere é uma vogal.
+- Entrada: c - caractere
+- Saída: True se c = A,E,I,O,U,a,e,i,o,u
+
+>>> éVogal 'a'
+True
+
+>>> éVogal 'B'
+False
+
+-}
+éVogal c = undefined 
+
+
